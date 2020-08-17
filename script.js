@@ -26,4 +26,19 @@ $(document).ready(function () {
       getFiveDayForecast(lon, lat);
     });
   }
+  function getFiveDayForecast(lon, lat) {
+    $.get(function (response) {
+      $("#uvIndex").text(response.current.uvi);
+      if (response.current.uvi <= 3) {
+        $("#uvIndex").css("background-color", "blue");
+      } else if (response.current.uvi <= 6) {
+        $("#uvIndex").css("background-color", "green");
+      } else if (response.current.uvi <= 10) {
+        $("#uvIndex").css("background-color", "red");
+      } else {
+        $("#uvIndex").css("background-color", "orange");
+      }
+      renderFiveDay(response.daily);
+    });
+  }
 });
