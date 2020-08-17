@@ -18,7 +18,12 @@ $(document).ready(function () {
           "@2x.png"
       );
       $("#currentDate").text(moment().format("MMM DO, YYY"));
-      "#windspeed".text(response.wind.speed + "mph");
+      $("#windspeed").text(response.wind.speed + "mph");
+      $("#currentTemp").text(response.main.temp);
+      $("#humidty").text(response.main.humidity + "%");
+      let lon = response.coord.lon;
+      let lat = response.coord.lat;
+      getFiveDayForecast(lon, lat);
     });
   }
 });
