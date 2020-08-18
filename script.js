@@ -27,24 +27,32 @@ $(document).ready(function () {
     });
   }
   function getDaysForecast(lon, lat) {
-    $.get(function (response) {
-      $("#uvIndex").text(response.current.uvi);
-      if (response.current.uvi <= 3) {
-        $("#uvIndex").css("background-color", "blue");
-      } else if (response.current.uvi <= 6) {
-        $("#uvIndex").css("background-color", "green");
-      } else if (response.current.uvi <= 10) {
-        $("#uvIndex").css("background-color", "red");
-      } else {
-        $("#uvIndex").css("background-color", "orange");
+    $.get(
+      "https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" +
+        lat +
+        "&lon=" +
+        lon +
+        "&appid=" +
+        apikey,
+      function (response) {
+        $("#uvIndex").text(response.current.uvi);
+        if (response.current.uvi <= 3) {
+          $("#uvIndex").css("background-color", "blue");
+        } else if (response.current.uvi <= 6) {
+          $("#uvIndex").css("background-color", "green");
+        } else if (response.current.uvi <= 10) {
+          $("#uvIndex").css("background-color", "red");
+        } else {
+          $("#uvIndex").css("background-color", "orange");
+        }
+        FiveDay(response.daily);
       }
-      FiveDay(response.daily);
-    });
+    );
   }
   function FiveDay(arr) {
     $(".DaysContainers").empty();
 
-    for (let i = 1; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
       const forecastDays = $("<div>").addClass("forecastDays");
       const forecastDate = $("<p>").text(
         moment().add(i, "days").format("ddd-Do")
