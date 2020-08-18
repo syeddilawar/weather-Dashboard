@@ -84,7 +84,7 @@ $(document).ready(function () {
 
       cityButton.text(cities[i]);
 
-      $("#cityButtonsContainer").append(cityButton);
+      $("#ButtonsContainer").append(cityButton);
     }
   }
 
