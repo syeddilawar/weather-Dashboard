@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather-Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -29,8 +30,8 @@
         <!-- City Weather Information will be rendered here-->
         <div class="weatherInfo">
             <div id="cityWeatherContainer">
-                <img id="weatherIcon">
-                <h1 id='selectedCity'>City Name</h1>
+                <img id="weather">
+                <h1 id='City'>City Name</h1>
                 <p id="currentDate"></p>
                 <p>Wind Speed: <span id='windSpeed'></span></p>
                 <p>Current Temp: <span id='currentTemp'></span></p>
@@ -39,7 +40,7 @@
             </div>
             <div class="fiveDayForecast">
                 <h1>5 Day Forcast</h1>
-                <div class="fiveDayContainers"></div>
+                <div class="DaysContainers"></div>
             </div>
         </div>
        

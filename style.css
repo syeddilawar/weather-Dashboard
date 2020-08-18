@@ -1,0 +1,81 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 2px solid black;
+  background-color: lightgray;
+  margin: 0%;
+}
+.mainContainer {
+  display: flex;
+}
+#cityForm {
+  margin-bottom: 25px;
+  display: flex;
+}
+#cityInput {
+  width: 100%;
+}
+#searchCity {
+  font-size: 30px;
+}
+.citySearchContainer {
+  width: 30%;
+  font-size: 25px;
+  font-family: sans-serif;
+  border-radius: 0.25rem;
+  border: 2px solid #dee2e6;
+  padding: 30px;
+  height: 84vh;
+  margin-top: 20px;
+}
+#cityButtonsContainer {
+  display: flex;
+  flex-direction: column;
+}
+.city {
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: initial;
+  border-radius: 0.25rem;
+  border: 4px solid #dee2e6;
+}
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+#cityWeatherContainer {
+  padding: 20px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 0.25rem;
+  border: 2px solid #dee2e6;
+}
+#weatherIcon {
+  float: right;
+  width: 150px;
+}
+#uvIndex {
+  border-radius: 3px;
+  padding: 3px;
+}
+.fiveDayForecast {
+  margin: 10px 40px;
+}
+.DaysContainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.forecastDays {
+  width: 160px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 3px;
+  margin: 20px;
+}
